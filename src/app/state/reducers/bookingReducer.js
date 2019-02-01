@@ -6,17 +6,15 @@ const INITIAL_STATE = {
   difference: 0,
   roomType: "",
   occupants: 0,
-  roomsummary: {
-    roomCharge: 0,
-    occupantCharges: 0,
-    totalRoomCharges: 0,
-    totalOccupantCharges: 0,
-    discount: 0,
-    grandTotal: 0,
-    afterTax: 0,
-    total: 0,
-    gst: 0
-  }
+  roomCharge: 0,
+  occupantCharges: 0,
+  totalRoomCharges: 0,
+  totalOccupantCharges: 0,
+  discount: 0,
+  grandTotal: 0,
+  afterTax: 0,
+  total: 0,
+  gst: 0
 };
 
 const bookingReducer = (state = INITIAL_STATE, action) => {
@@ -35,7 +33,15 @@ const bookingReducer = (state = INITIAL_STATE, action) => {
     case actionTypes.GET_SUMMARY:
       return {
         ...state,
-        roomsummary: action.payload
+        roomCharge: action.payload.roomCharge,
+        occupantCharges: action.payload.occupantCharges,
+        totalRoomCharges: action.payload.totalRoomCharges,
+        totalOccupantCharges: action.payload.totalOccupantCharges,
+        discount: action.payload.discount,
+        grandTotal: action.payload.grandTotal,
+        afterTax: action.payload.afterTax,
+        total: action.payload.total,
+        gst: action.payload.gst
       };
     default:
       return state;

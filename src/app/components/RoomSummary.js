@@ -6,16 +6,16 @@ let RoomSummary = props => {
   return (
     <div>
       <h3>RoomSummary</h3>
-      <p>Total</p> {props.roomSummary.total}
-      <p>Nights</p>
-      <p>occupant charges</p>{props.roomSummary.occupantCharges}
-      <p>total room charges</p>{props.roomSummary.totalRoomCharges}
-      <p>discount</p>{props.roomSummary.discount}
-      <p>total occupant charges</p>     {props.roomSummary.totalOccupantCharges}
-      <p>room charges grand total</p>  {props.roomSummary.grandTotal}
-      <p>before tax</p>
-      <p>gst</p>{props.roomSummary.gst}
-      <p>payable</p>  {props.roomSummary.grandTotal}
+      <p>Total {props.booking.total}</p>
+      <p>Nights{props.booking.difference}</p>
+      <p>occupant charges{props.booking.occupantCharges}</p>
+      <p>total room charges{props.booking.totalRoomCharges}</p>
+      <p>discount{props.booking.discount}</p>
+      <p>total occupant charges {props.booking.totalOccupantCharges}</p>
+      <p>room charges grand total {props.booking.grandTotal}</p>
+      <p>after tax {props.booking.afterTax}</p>
+      <p>gst{props.booking.gst}</p>
+      <p>payable {props.booking.grandTotal}</p>
     </div>
   );
 };

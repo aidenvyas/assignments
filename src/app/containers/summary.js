@@ -4,7 +4,6 @@ import { bindActionCreators } from "redux";
 import RoomSummary from "../components/RoomSummary";
 const mapStateToProps = state => {
   return {
-    roomSummary: state.booking.roomsummary,
     booking: state.booking
   };
 };

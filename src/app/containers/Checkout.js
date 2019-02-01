@@ -8,8 +8,7 @@ const mapStateToProps = state => {
     checkoutdate: state.booking.checkoutdate,
     difference: state.booking.difference,
     occupants: state.booking.occupants,
-    roomType: state.booking.roomType,
-    roomSummary: state.booking.roomsummary
+    roomType: state.booking.roomType
   };
 };
 

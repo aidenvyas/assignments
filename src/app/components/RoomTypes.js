@@ -17,10 +17,6 @@ let RoomType = props => (
       options={["select", 1, 2, 3, 4]}
       onchange={props.onchange}
     />
-    {props.occupants !== 0 && props.roomType !== "" && !props.roomSummary.total
-      ? props.functioncall()
-      : ""}
-    {props.roomSummary ? <RoomSummary roomSummary={props.roomSummary} /> : ""}
   </div>
 );
 
