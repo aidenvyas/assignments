@@ -7,7 +7,7 @@ let RoomSummary = props => {
     <div>
       <h3>RoomSummary</h3>
       <p>Total</p> {props.roomSummary.total}
-      <p>Nights</p>{props.booking.difference}
+      <p>Nights</p>
       <p>occupant charges</p>{props.roomSummary.occupantCharges}
       <p>total room charges</p>{props.roomSummary.totalRoomCharges}
       <p>discount</p>{props.roomSummary.discount}

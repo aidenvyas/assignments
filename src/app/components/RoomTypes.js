@@ -20,7 +20,7 @@ let RoomType = props => (
     {props.occupants !== 0 && props.roomType !== "" && !props.roomSummary.total
       ? props.functioncall()
       : ""}
-    {props.roomSummary.total ? <RoomSummary roomSummary={props.roomSummary} /> : ""}
+    {props.roomSummary ? <RoomSummary roomSummary={props.roomSummary} /> : ""}
   </div>
 );
 
