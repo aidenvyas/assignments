@@ -14,12 +14,13 @@ const INITIAL_STATE = {
     discount: 0,
     grandTotal: 0,
     afterTax: 0,
-    total: 0
+    total: 0,
+    gst: 0
   }
 };
 
 const bookingReducer = (state = INITIAL_STATE, action) => {
-  console.log( action.payload, " in booking reducer");
+  console.log(action.payload, " in booking reducer");
   switch (action.type) {
     case actionTypes.DATE_CHANGE:
       return {

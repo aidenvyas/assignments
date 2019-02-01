@@ -39,7 +39,7 @@ class Checkout extends Component {
           functioncall={this.props.dateHandler.calculateSummary}
           roomSummary={this.props.roomSummary}
         />
-        <Summary />
+        {/* <Summary /> */}
       </div>
     );
   }

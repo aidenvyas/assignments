@@ -42,16 +42,25 @@ export function calculateSummary() {
       totalRoomCharges - (totalRoomCharges * discount) / 100.0
     );
 
+    let total = 0;
+    if (discount) {
+      total = roomCharge + occupantCharges * (discount / 100);
+    } else {
+      total = roomCharge + occupantCharges;
+    }
+    let gst = parseInt(total * 0.18);
     const afterTax = (totalOccupantCharges + grandTotal) * 1.18;
 
     let summary = {
+      total,
       roomCharge,
       occupantCharges,
       totalRoomCharges,
       totalOccupantCharges,
       discount,
       grandTotal,
-      afterTax
+      afterTax,
+      gst
     };
 
     dispatch(getSummary(summary));
